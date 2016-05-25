@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lazy project</title>
+
+    <!-- <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/css/style.css'>
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/satellizer/satellizer.min.js"></script>
+    <script src="/bower_components/ngstorage/ngStorage.min.js"></script>
+
+    <script src="/js/module.js"></script>
+    <script src="/js/services.js"></script>
+
+    <script src="/js/controllers/loginCtrl.js"></script>
+    <script src="/js/controllers/registerCtrl.js"></script>
+    <script src="/js/controllers/profileCtrl.js"></script>
+    <script src="/js/controllers/mainCtrl.js"></script>
+    <script src="/js/controllers/homeCtrl.js"></script>
+
+  </head>
+
+  <body ng-app="lazyApp" ng-controller="mainCtrl">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" ui-sref="home">Home</a>
+
+        <ul class="nav navbar-nav navbar-right" ng-if="!isAuthenticated()">
+          <li><a ui-sref="login">Sign in</a></li>
+          <li><a ui-sref="register">Sign up</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" ng-if="isAuthenticated()">
+          <li><a role="button" ng-click="logout()">Log out</a></li>
+        </ul>
+
+
+      </div>
+    </nav>
+
+    <div class="container ui-view-display">
+      <ui-view> </ui-view>
+    </div>
+
+  </body>
+</html>

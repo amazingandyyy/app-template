@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div ng-if="!isAuthenticated()">
+    <h2>Welcome home</h2>
+    <hr>
+    <a class="btn btn-success btn-lg" ui-sref="login">Sign in</a>
+    <a class="btn btn-primary btn-lg" ui-sref="register">Sign up</a>
+
+  </div>
+
+<div ng-if="isAuthenticated()">
+
+  <h2><span style="color: #18bc9c;">Welcome home</span> {{$storage.currentUser.displayName}}</h2>
+  <hr>
+
+  <a role="button" class="btn btn-primary btn-lg" ui-sref="profile">View profile</a>
+
+</div>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+.ui-view-display {
+  margin-top: 100px;
+}
+
+.btn-block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alert-danger {
+  background: #f2dede;
+  color: #a94442;
+  text-align: center;
+}
+
+.alert-success {
+  background: #dff0d8;
+  color: #3c763d;
+  border-color: #d6e9c6;
+  text-align: center;
+}
+
+.jumbotron {
+  height: 400px;
+}

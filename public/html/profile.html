@@ -1,0 +1,15 @@
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+
+      <img class="profile-picture" ng-src="{{$storage.currentUser.picture}}" ng-if="$storage.currentUser.picture">
+      <img class="profile-picture" ng-src="http://cdn1.thelittlenews.com/wp-content/uploads/2015/09/wallpaper-for-facebook-profile-photo-450x400.jpg" ng-if="!$storage.currentUser.picture">
+      <div class="caption">
+        <h3>{{$storage.currentUser.displayName}}</h3>
+        <p><strong>Email:</strong> {{$storage.currentUser.email}}</p>
+        <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+      </div>
+    </div>
+  </div>
+</div>

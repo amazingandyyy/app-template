@@ -1,0 +1,25 @@
+{
+  "name": "lazy-project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "pratik <lazy.monk.13@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "bootstrap": "^3.3.6",
+    "satellizer": "^0.14.0",
+    "ngstorage": "^0.3.10",
+    "bootstrap-social": "^5.0.0"
+  }
+}
